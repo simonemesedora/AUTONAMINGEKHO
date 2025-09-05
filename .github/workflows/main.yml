@@ -25,10 +25,10 @@ jobs:
 
     - name: Build executable with PyInstaller
       run: |
-        pyinstaller --naming_ekho_unlock+deletehunweekly.py --add-data "hungarian_names.txt;."
+        pyinstaller --onefile naming_ekho_unlock+deletehunweekly.py --add-data "hungarian_names.txt;."
 
     - name: Upload exe artifact
       uses: actions/upload-artifact@v4
       with:
         name: built-exe
-        path: dist/your_script.exe
+        path: dist/naming_ekho_unlock+deletehunweekly.exe
